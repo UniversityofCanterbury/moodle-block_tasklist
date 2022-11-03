@@ -1,8 +1,12 @@
 # Task List #
 
-TODO Describe the plugin shortly here.
+![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/UniversityofCanterbury/moodle-block_tasklist/ci/MOODLE_400_STABLE?label=ci)
 
-TODO Provide more detailed description here.
+## Branches
+
+| Moodle version     | Branch             |
+|--------------------| ------------------ |
+| Moodle 4.0         | `MOODLE_40_STABLE` |
 
 ## Installing via uploaded ZIP file ##
 
@@ -38,7 +42,7 @@ version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY
 WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
-PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with
-this program.  If not, see <https://www.gnu.org/licenses/>.
+this program. If not, see <https://www.gnu.org/licenses/>.
