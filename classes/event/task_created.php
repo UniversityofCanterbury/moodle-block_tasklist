@@ -19,7 +19,7 @@ namespace block_tasklist\event;
 /**
  * Event for user creating a task.
  *
- * @package     block_list
+ * @package     block_tasklist
  * @copyright   2022 University of Canterbury
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
