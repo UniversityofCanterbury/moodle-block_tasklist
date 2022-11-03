@@ -1,12 +1,12 @@
 # Task List #
 
-![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/UniversityofCanterbury/moodle-block_tasklist/ci/MOODLE_400_STABLE?label=ci)
+![GitHub Workflow Status (MOODLE_400_STABLE)](https://img.shields.io/github/workflow/status/UniversityofCanterbury/moodle-block_tasklist/ci/MOODLE_400_STABLE?label=ci)
 
 ## Branches
 
-| Moodle version     | Branch             |
-|--------------------| ------------------ |
-| Moodle 4.0         | `MOODLE_40_STABLE` |
+| Moodle version     | Branch              |
+|--------------------|---------------------|
+| Moodle 4.0         | `MOODLE_400_STABLE` |
 
 ## Installing via uploaded ZIP file ##
 
