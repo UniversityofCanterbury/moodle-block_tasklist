@@ -1,0 +1,64 @@
+.block-tasklist-item > hr {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.block-tasklist-item > label {
+    margin-bottom: 0;
+}
+
+.block-tasklist-additem {
+    display: flex;
+}
+
+.block-tasklist-list {
+    list-style: none;
+    padding-left: 0;
+    cursor: move;
+}
+
+.block-tasklist-item > label {
+    cursor: move;
+}
+
+.block-tasklist-input-container {
+    display: flex;
+    position: relative;
+    flex-grow: 1;
+    align-items: stretch;
+}
+
+.block-tasklist-additem-input-container > input.block-tasklist-input {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    width: 100% !important;
+    display: block !important;
+}
+
+.block-tasklist-additem > button.block-tasklist-input-button {
+    align-items: center;
+    display: inline-flex !important;
+    margin-left: -1px;
+    position: relative;
+    border-top-left-radius: 0  !important;
+    border-bottom-left-radius: 0  !important;
+}
+
+.block-tasklist-item-complete > label {
+    text-decoration: line-through;
+}
+
+.block-tasklist-item-icons {
+    float: right;
+}
+
+.block-tasklist-item-delete,
+.block-tasklist-item-edit,
+.block-tasklist-item-complete {
+    background: none;
+    border: none;
+}
+
+.block-tasklist-item-edit-input {
+    width: 65% !important;
+}
