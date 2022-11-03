@@ -78,6 +78,12 @@ class provider implements
         }
     }
 
+    /**
+     * Get all contexts containing user information for a given user.
+     *
+     * @param int $userid the id of the user.
+     * @return contextlist the list of contexts containing user information.
+     */
     public static function get_contexts_for_userid(int $userid): contextlist {
         $sql = "SELECT ctx.id
                 FROM {block_tasklist_items} tli
@@ -95,6 +101,11 @@ class provider implements
         return $contextlist;
     }
 
+    /**
+     * Export all user data for the specified user, in the specified contexts.
+     *
+     * @param approved_contextlist $contextlist The approved contexts to export information for.
+     */
     public static function export_user_data(approved_contextlist $contextlist) {
         global $DB;
 
@@ -115,13 +126,23 @@ class provider implements
         }
     }
 
+    /**
+     * Delete all user data within the given context.
+     *
+     * @param context $context A context.
+     */
     public static function delete_data_for_all_users_in_context(\context $context) {
         global $DB;
         if ($context instanceof \context_user) {
-            $DB->delete_records('block_tasklist_items', ['userid' => $context->instanceid]);
+            $DB->delete_records('block_tasklist_items', ['instanceid' => $context->instanceid]);
         }
     }
 
+    /**
+     * Delete all user data for a given user.
+     *
+     * @param approved_contextlist $contextlist The approved contexts to delete information for.
+     */
     public static function delete_data_for_user(approved_contextlist $contextlist) {
         global $DB;
         $DB->delete_records('block_tasklist_items', ['userid' => $contextlist->get_user()->id]);

@@ -25,16 +25,29 @@ namespace block_tasklist\event;
  */
 class task_created extends \core\event\base {
 
+    /**
+     * Set basic properties for the event.
+     */
     protected function init() {
         $this->data['crud'] = 'c';
         $this->data['edulevel'] = self::LEVEL_OTHER;
     }
 
+    /**
+     * Returns non-localised event description with id's.
+     *
+     * @return string
+     */
     public function get_description() {
         return "The user with id '{$this->userid}' created a new task '{$this->other['taskname']}' " .
             "with id {$this->other['taskid']}";
     }
 
+    /**
+     * Returns localised general event name.
+     *
+     * @return string
+     */
     public static function get_name() {
         return get_string('event:taskcreated', 'block_tasklist');
     }

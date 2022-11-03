@@ -25,15 +25,28 @@ namespace block_tasklist\event;
  */
 class task_deleted extends \core\event\base {
 
+    /**
+     * Set basic properties for the event.
+     */
     protected function init() {
         $this->data['crud'] = 'd';
         $this->data['edulevel'] = self::LEVEL_OTHER;
     }
 
+    /**
+     * Returns non-localised event description with id's.
+     *
+     * @return string
+     */
     public function get_description() {
         return "The user with id '{$this->userid}' deleted a task '{$this->other['taskname']}' id '{$this->other['taskid']}'";
     }
 
+    /**
+     * Returns localised general event name.
+     *
+     * @return string
+     */
     public static function get_name() {
         return get_string('event:taskdeleted', 'block_tasklist');
     }

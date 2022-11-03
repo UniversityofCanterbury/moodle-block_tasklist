@@ -25,16 +25,29 @@ namespace block_tasklist\event;
  */
 class task_complete extends \core\event\base {
 
+    /**
+     * Set basic properties for the event.
+     */
     protected function init() {
         $this->data['crud'] = 'u';
         $this->data['edulevel'] = self::LEVEL_OTHER;
     }
 
+    /**
+     * Returns non-localised event description with id's.
+     *
+     * @return string
+     */
     public function get_description() {
         return "The user with id '{$this->userid}' flagged task '{$this->other['taskname']}' " .
             "with id '{$this->other['taskid']}' as complete";
     }
 
+    /**
+     * Returns localised general event name.
+     *
+     * @return string
+     */
     public static function get_name() {
         return get_string('event:taskcomplete', 'block_tasklist');
     }

@@ -37,6 +37,12 @@ class restore_tasklist_block_structure_step extends restore_structure_step {
         return $paths;
     }
 
+    /**
+     * Restore task items against the new block instance.
+     *
+     * @param mixed $data Contains list of task items
+     * @return void
+     */
     public function process_block($data) {
         global $DB;
 

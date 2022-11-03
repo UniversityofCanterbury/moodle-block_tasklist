@@ -56,7 +56,7 @@ class add_item extends external_api {
      *
      * @param int $instanceid
      * @param string $name
-     * @param boolean $complete
+     * @param bool $complete
      * @param int $position
      */
     public static function execute(int $instanceid, string $name, bool $complete, int $position) {
