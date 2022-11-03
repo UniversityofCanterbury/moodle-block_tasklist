@@ -40,8 +40,8 @@
     display: inline-flex !important;
     margin-left: -1px;
     position: relative;
-    border-top-left-radius: 0  !important;
-    border-bottom-left-radius: 0  !important;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
 }
 
 .block-tasklist-item-complete > label {
