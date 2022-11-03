@@ -70,7 +70,8 @@ class delete_item extends external_api {
         $context = \context_block::instance($instanceid);
         self::validate_context($context);
 
-        if ($record = $DB->get_record('block_tasklist_items', ['instanceid' => $instanceid, 'userid' => $USER->id, 'id' => $itemid])) {
+        if ($record =
+            $DB->get_record('block_tasklist_items', ['instanceid' => $instanceid, 'userid' => $USER->id, 'id' => $itemid])) {
             $DB->delete_records('block_tasklist_items', ['instanceid' => $instanceid, 'userid' => $USER->id, 'id' => $itemid]);
             task_deleted::create([
                 'context' => $context,

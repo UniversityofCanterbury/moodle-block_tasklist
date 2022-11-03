@@ -22,12 +22,6 @@
  * @copyright   2022 University of Canterbury
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-defined('MOODLE_INTERNAL') || die();
-
-/**
- * Define the complete structure for backup, with file and id annotations.
- */
 class backup_tasklist_block_structure_step extends backup_block_structure_step {
 
     /**
@@ -39,10 +33,11 @@ class backup_tasklist_block_structure_step extends backup_block_structure_step {
         global $DB;
 
         $items = new backup_nested_element('items', ['instanceid'], null);
-        $item = new backup_nested_element('item', array('instanceid'), array('userid', 'instanceid', 'name', 'complete', 'position'));
+        $item =
+            new backup_nested_element('item', array('instanceid'), array('userid', 'instanceid', 'name', 'complete', 'position'));
 
         $items->add_child($item);
-        $items->set_source_array(array((object)array('instanceid' => backup::VAR_BLOCKID)));
+        $items->set_source_array(array((object) array('instanceid' => backup::VAR_BLOCKID)));
 
         $item->set_source_table('block_tasklist_items', ['instanceid' => backup::VAR_BLOCKID]);
 

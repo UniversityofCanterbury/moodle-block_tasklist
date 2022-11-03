@@ -31,7 +31,8 @@ class task_created extends \core\event\base {
     }
 
     public function get_description() {
-        return "The user with id '{$this->userid}' created a new task '{$this->other['taskname']}' with id {$this->other['taskid']}";
+        return "The user with id '{$this->userid}' created a new task '{$this->other['taskname']}' " .
+            "with id {$this->other['taskid']}";
     }
 
     public static function get_name() {

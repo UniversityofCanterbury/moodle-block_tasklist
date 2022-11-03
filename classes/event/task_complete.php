@@ -31,7 +31,8 @@ class task_complete extends \core\event\base {
     }
 
     public function get_description() {
-        return "The user with id '{$this->userid}' flagged task '{$this->other['taskname']}' with id '{$this->other['taskid']}' as complete";
+        return "The user with id '{$this->userid}' flagged task '{$this->other['taskname']}' " .
+            "with id '{$this->other['taskid']}' as complete";
     }
 
     public static function get_name() {

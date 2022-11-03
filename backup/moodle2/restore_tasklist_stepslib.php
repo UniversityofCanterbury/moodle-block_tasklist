@@ -22,12 +22,6 @@
  * @copyright   2022 University of Canterbury
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-defined('MOODLE_INTERNAL') || die();
-
-/**
- * Defines the structure step to restore one tasklist block.
- */
 class restore_tasklist_block_structure_step extends restore_structure_step {
 
     /**
@@ -52,7 +46,7 @@ class restore_tasklist_block_structure_step extends restore_structure_step {
             return;
         }
 
-        foreach($data->items[0]['item'] as $item) {
+        foreach ($data->items[0]['item'] as $item) {
             $item = (object) $item;
             $item->instanceid = $this->task->get_blockid();
             $DB->insert_record('block_tasklist_items', $item);
