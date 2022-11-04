@@ -8,4 +8,5 @@ jobs:
     with:
       disable_phpunit: true
       disable_release: true
+      disable_mustache: true
       codechecker_max_warnings: 0
