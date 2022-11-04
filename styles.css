@@ -29,19 +29,19 @@
 }
 
 .block-tasklist-additem-input-container > input.block-tasklist-input {
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    width: 100% !important;
-    display: block !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    width: 100%;
+    display: block;
 }
 
 .block-tasklist-additem > button.block-tasklist-input-button {
     align-items: center;
-    display: inline-flex !important;
+    display: inline-flex;
     margin-left: -1px;
     position: relative;
-    border-top-left-radius: 0 !important;
-    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 
 .block-tasklist-item-complete > label {
@@ -59,6 +59,6 @@
     border: none;
 }
 
-.block-tasklist-item-edit-input {
-    width: 65% !important;
+li.block-tasklist-item > input.block-tasklist-item-edit-input {
+    width: 65%;
 }
