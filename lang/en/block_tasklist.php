@@ -26,6 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'Task List';
+$string['tasklist:addinstance'] = 'Add a new tasklist block';
+$string['tasklist:myaddinstance'] = 'Add a new tasklist block to Dashboard';
 $string['additem'] = 'Add item';
 $string['completeitem'] = 'Complete item';
 
