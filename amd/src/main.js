@@ -96,6 +96,13 @@ const fetchList = async (instanceid) => {
             instanceid: instanceid,
         },
     }])[0]
+        .then(items => {
+            if (!items.length) {
+                // Display no items text as list is empty.
+                document.getElementById('block-tasklist-no-items-' + instanceid).style.display = 'block';
+            }
+            return items;
+        })
         .then(addItems)
         .fail(Notification.exception);
 };
@@ -126,6 +133,13 @@ const renderItem = (itemData) => {
     Templates.render('block_tasklist/task_item', itemData).done(function(html) {
         let list = document.querySelector('div[data-instanceid="' + itemData.instanceid + '"] ul.block-tasklist-list');
         list.insertAdjacentHTML('beforeend', html);
+
+        // Check that the no items text may be displayed within this render function so there isn't a noticeable
+        // gap between hiding the no items text and an item appearing.
+        if (list.childElementCount === 1) {
+            // Hide no items text as will be adding an item.
+            document.getElementById('block-tasklist-no-items-' + itemData.instanceid).style.display = 'none';
+        }
 
         let item = document.querySelector('li[data-itemid="' + itemData.id + '"]');
         addCompleteItemEvents(item);
@@ -220,6 +234,11 @@ const addDeleteEvent = (item) => {
         item.remove();
         deleteItem(item.dataset.instanceid, item.dataset.itemid);
         recalculatePositions(item.dataset.instanceid);
+        let list = document.querySelector('div[data-instanceid="' + item.dataset.instanceid + '"] ul.block-tasklist-list');
+        if (list.childElementCount === 0) {
+            // Show no items text as list is empty.
+            document.getElementById('block-tasklist-no-items-' + item.dataset.instanceid).style.display = 'block';
+        }
     });
 };
 

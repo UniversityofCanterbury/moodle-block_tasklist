@@ -62,3 +62,7 @@
 li.block-tasklist-item > input.block-tasklist-item-edit-input {
     width: 65%;
 }
+
+.block-tasklist-no-items {
+    text-align: center;
+}
