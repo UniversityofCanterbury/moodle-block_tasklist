@@ -31,6 +31,7 @@ $string['tasklist:myaddinstance'] = 'Add a new tasklist block to Dashboard';
 $string['additem'] = 'Add item';
 $string['completeitem'] = 'Complete item';
 $string['noitems'] = 'This block allows you to create a personal list of tasks/goals';
+$string['onlyaccessibletotasklistuser'] = 'Task list only accessible to the user';
 
 $string['event:taskcreated'] = 'Task created';
 $string['event:taskdeleted'] = 'Task deleted';

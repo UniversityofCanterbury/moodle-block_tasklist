@@ -25,8 +25,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'block_tasklist';
-$plugin->release = '2022111800';
-$plugin->version = 2022110400;
+$plugin->release = '2022112300';
+$plugin->version = 2022112300;
 $plugin->requires = 2020061500;
 $plugin->maturity = MATURITY_STABLE;
 $plugin->supported = [400, 401];

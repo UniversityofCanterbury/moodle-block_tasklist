@@ -36,6 +36,8 @@ class block_tasklist extends block_base {
      * @return stdClass The block contents.
      */
     public function get_content() {
+        global $USER;
+
         if ($this->content !== null) {
             return $this->content;
         }
@@ -49,6 +51,11 @@ class block_tasklist extends block_base {
         $this->content->items = array();
         $this->content->icons = array();
         $this->content->footer = '';
+
+        if ($this->page->context instanceof context_user && $this->page->context->instanceid != $USER->id) {
+            $this->content->text = get_string('onlyaccessibletotasklistuser', 'block_tasklist');
+            return $this->content;
+        }
 
         $renderer = $this->page->get_renderer('core');
 
